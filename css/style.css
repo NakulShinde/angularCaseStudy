@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans',sans-serif;
+	color: #0087e6;
+}
+
+a {
+	text-decoration: none;
+}
+
+.screen-width {
+	width: 100%;
+}
+
+.app-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 70px;
+	z-index: 99;
+	background-color: #ffffff;
+	border-bottom: 3px solid #0087e6;
+	box-shadow: 0px -3px 11px 1px rgba(0, 0, 0, 0.7);
+}
+
+.app-logo {
+	background-color: white;
+	border-radius: 5px;
+	position: absolute;
+	top: 4px;
+	left: 10px;
+	width: 70px;
+	height: 60px;
+}
+
+.app-title {
+	width: 18%;
+	max-width: 416px;
+	max-height: 38px;
+	position: absolute;
+	top: 50%;
+	left: 145px;
+	-webkit-transform: translate(0, -50%)
+}
+
+.app-body {
+	padding-top: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.card {
+	background: white;
+	padding: 0px 10px 5px;
+	border: 1px solid #cccccc;
+	box-shadow: 0px 3px 5px -3px rgba(50, 50, 50, 0.75);
+	margin-bottom: 15px;
+}
+
+.card-heading {
+	color: rgb(102, 102, 102);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+
+.card-section-separator {
+	border: 0;
+	border-bottom: 1px solid #efefef;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+.card-section-heading {
+	color: rgb(50, 50, 50);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin-bottom: 10px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.card-section-body {
+	margin-bottom: 10px;
+	max-height: 173px;
+	overflow: auto;
+}
+
+.matches-list {
+	list-style: none;
+	margin: auto;
+}
+
+.match-item {
+	clear: both;
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 7px;
+	border-bottom: 1px solid #efefef;
+}
+
+.small-flag {
+	width: 40px;
+	height: 25px;
+	border: 1px solid rgb(220, 220 , 220);
+}
+
+.home-flag {
+	float: left;
+}
+
+.away-flag {
+	float: right;
+}
+
+.home-team-code {
+	color: rgb(120, 120, 120);
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.away-team-code {
+	color: rgb(120, 120, 120);
+	font-weight: bold;
+	float: right;
+	padding-right: 5px;
+}
+
+
+.score {
+	font-weight: bold;
+}
+
+.motif {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 100%;
+	opacity: 0.4;
+}
+
+
+/* Matches Widget */
+.div-table {
+	display: table;
+	width: 100%;
+}
+
+.div-table-row {
+	display: table-row;
+	overflow: hidden;
+	height: auto;
+}
+
+.div-table-logo-cell {
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+}
+
+.div-table-logo {
+	width: 65px;
+	position: absolute;
+}
+
+.div-table-details-cell {
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 75px;
+}
+
+.div-table-details-heading {
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 5px;
+}
+
+.div-table-details-heading-flag {
+
+}
+
+.div-table-details-heading-team-name {
+	font-size: 25px;
+	font-weight: bold;
+	top: -8px;
+	line-height: 25px;
+}
+
+.div-table-details-body-list {
+	list-style: none;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.div-table-details-body-list li span {
+	color: rgb(50, 50, 50);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+}
+
+.div-table-details-body-list li span:nth-of-type(1) {
+	font-size: 20px;
+}
+
+.card-footer-text {
+	color: rgb(50, 50, 50);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+
+/* Teams Page */
+.teams-page-item {
+	margin-bottom: 15px;
+}
+
+.teams-page-div-table-details-cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+
+/* Players Page */
+.players-page-item {
+	padding-bottom: 31px;
+	border-bottom: 1px solid #efefef;
+}
+
+.players-page-div-table-logo-cell {
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+}
+
+.players-page-div-table-logo {
+	width: 65px;
+	position: absolute;
+}
+
+.players-page-div-table-details-heading {
+	padding-bottom: 5px;
+}
+
+.player-filter {
+	width: 100%;
+}
+
+.error-message {
+	color: #aa3333;
+	font-size: 15px;
+
+}
+
+.my-animate.ng-enter{
+	transition: 0.5s linear all;
+	opacity: 0;
+}
+
+.my-animate.ng-enter-active{
+	opacity: 1;
+}
+
+.my-animate.ng-leave, .my-animate.ng-leave-active{
+	transition: none;
+	opacity: 0;
+}
+
+.match-date{
+	color: #0087e6;
+    font-family: serif;	
+}
+
+.bs-example {
+	margin-right: 0;
+	margin-left: 0;
+	background-color: #fff;
+	border-color: #ddd;
+	border-width: 1px;
+	border-radius: 4px 4px 0 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}

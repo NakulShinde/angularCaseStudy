@@ -1,0 +1,58 @@
+<div class="card">
+	<div class="card-heading">
+		Matches
+	</div>
+	<div class="card-body" ng-controller="matchesSummaryController">
+		<div ng-switch on="matchesSummary.status">
+			<div ng-switch-when="loading" style="text-align: center" class="my-animate">
+				<img style="opacity:0.7" src="img/loading.gif"> Loading...
+			</div>
+			<div ng-switch-when="error" class="my-animate">
+				<div ng-include="'template/error.html'"></div>
+			</div>
+			<div ng-switch-when="success" class="my-animate">
+				<div class="card-section-heading">
+					Upcoming Matches
+				</div>
+				<div class="card-section-body">
+					<ul class="matches-list">
+						<li class="match-item" ng-repeat="match in matchesSummary.allMatches">	
+						
+								<div class="match-date">{{matchesSummary.convertDate(match.StartDate) | date:'EEE MMM d, yyyy h:mm a'}}</div>
+								<div class="home-team-code">{{match.series_name}}</div>
+													
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card">
+	<div class="card-heading">
+		News
+	</div>
+	<div class="card-body" ng-controller="newsSummaryController">
+		<div ng-switch on="newsSummary.status">
+			<div ng-switch-when="loading" style="text-align: center" class="my-animate">
+				<img style="opacity:0.7" src="img/loading.gif"> Loading...
+			</div>
+			<div ng-switch-when="error" class="my-animate">
+				<div ng-include="'template/error.html'"></div>
+			</div>
+			<div ng-switch-when="success" class="my-animate">
+				<div class="card-section-heading">
+					Latest News
+				</div>
+				<div class="card-section-body">
+					<ul class="matches-list">
+						<li class="match-item" ng-repeat="news in newsSummary.allNews">	
+							<span><img style="opacity:0.7" ng-src="{{news.thumburl}}"></span>
+							<div class="home-team-code">{{news.title}}</div>													
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

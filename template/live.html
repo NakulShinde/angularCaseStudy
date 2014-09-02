@@ -1,0 +1,34 @@
+<div class="card">
+	<div class="card-heading">
+		Live Scores
+	</div>
+	<div class="card-body" ng-controller="liveSummaryController">
+		<div ng-switch on="liveSummary.status">
+			<div ng-switch-when="loading" style="text-align: center" class="my-animate">
+				<img style="opacity:0.7" src="img/loading.gif"> Loading...
+			</div>
+			<div ng-switch-when="error" class="my-animate">
+				<div ng-include="'template/error.html'"></div>
+			</div>
+			<div ng-switch-when="success" class="my-animate">
+				<div class="card-section-heading">
+					Live Matches
+				</div>
+				<ul class="matches-list">
+
+						<li ng-if="liveSummary.noLiveMatches" class="match-item">
+								<span class="score">No live matches going on currently.</span>
+						</li>
+
+						<li ng-if="!liveSummary.noLiveMatches" ng-repeat="liveScore in liveSummary.liveScoreList" class="match-item">	
+								<img class="small-flag home-flag" ng-src="{{liveScore.homeTeamCode}}">
+								<img class="small-flag away-flag" ng-src="{{liveScore.awayTeamCode}}">
+								<span class="score">{{liveScore.title}}</span> <br>
+								<span class="score">{{liveScore.score}}</span>
+								<span class="score" ng-if="liveScore.tagLine != ''">{{liveScore.tagLine}}</span>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
